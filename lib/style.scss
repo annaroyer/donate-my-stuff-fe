@@ -11,24 +11,38 @@ body {
 }
 
 nav {
+  z-index: -1; position: relative;
   background-color: $cream;
-  .navigation-title {
+  .nav-title {
+    display: flex;
+    align-items: center;
     color: $carbon;
-    font:{
-      size: 2rem;
+    font: {
       family: 'Lato', sans-serif;
-      weight: bold;
+      size: 1.5rem;
+    }
+    .nav-logo {
+      max-width: 3rem;
     }
   }
-  .login-button {
-    height: 2rem;
+  .nav-menu {
+    .nav-link {
+      color: $carbon;
+      text-decoration: none;
+      padding: 0 2rem;
+      font: {
+        family: 'Signika', sans-serif;
+        size: 0.8rem;
+        weight: 100;
+      }
+    }
   }
 }
 
 header {
-  background: url('https://cdn.firespring.com/images/a9f9a03c-0e8d-4fd8-ac26-748a04f25f20.jpg') no-repeat;
-  background-size: 100%;
-  background-color: $watermelon;
+  z-index: -1; position: relative;
+  background: url('https://cdn.firespring.com/images/a9f9a03c-0e8d-4fd8-ac26-748a04f25f20.jpg') no-repeat center center;
+  background-size: cover;
   .search-form {
     display: flex;
     justify-content: center;
@@ -40,6 +54,7 @@ header {
       font: 2rem 'Lato', sans-serif;
       padding: 0 1rem;
       outline: none;
+      margin: 0.5rem;
     }
     .search-button {
       display: flex;
@@ -48,7 +63,7 @@ header {
       height: 3rem;
       width: 7rem;
       border-radius: 0.3rem;
-      margin: 1rem;
+      margin: 0.5rem;
       background-color: #FF3B3F;
       .magnifying-glass {
         width: 2rem;
