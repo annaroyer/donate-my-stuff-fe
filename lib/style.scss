@@ -11,7 +11,7 @@ body {
 }
 
 nav {
-  z-index: -1; position: relative;
+  position: relative;
   background-color: $cream;
   .nav-title {
     display: flex;
@@ -32,16 +32,19 @@ nav {
       padding: 0 2rem;
       font: {
         family: 'Signika', sans-serif;
-        size: 0.8rem;
+        size: 1rem;
         weight: 100;
       }
+    }
+    .nav-link:hover{
+      color: $watermelon;
     }
   }
 }
 
 header {
-  z-index: -1; position: relative;
-  background: url('https://cdn.firespring.com/images/a9f9a03c-0e8d-4fd8-ac26-748a04f25f20.jpg') no-repeat center center;
+  position: relative;
+  background: url('./images/pile-of-stuff.jpg') no-repeat center center;
   background-size: cover;
   .search-form {
     display: flex;
@@ -73,8 +76,9 @@ header {
 }
 
 .sub-header {
-  color: #A9A9A9;
+  color: $carbon;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 1rem;
 }
