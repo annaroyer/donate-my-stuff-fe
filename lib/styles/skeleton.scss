@@ -1,6 +1,9 @@
 body {
   margin: 0;
   padding: 0;
+}
+
+.grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 1fr);
@@ -9,28 +12,41 @@ body {
 }
 
 nav {
-  grid-area: 1 / 1 / span 1 / span 12;
   margin: 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  width: 100%;
+
 }
 
 header {
-  grid-area: 2 / 1 / span 3 / span 12;
+  grid-area: 1 / 1 / span 5 / span 12;
   display: flex;
   justify-content: center;
 }
 
 main {
-  grid-area: 5 / 1 / span 8 / span 8;
+  grid-area: 6 / 1 / span 6 / span 8;
+  padding: 0 3rem;
 }
 
 aside {
-  grid-area: 5 / 9 / span 8 / span 4;
+  grid-area: 6 / 9 / span 6 / span 4;
   padding: 0 2rem;
 }
 
 footer {
   height: 2rem;
+}
+
+.data-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.centered {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }

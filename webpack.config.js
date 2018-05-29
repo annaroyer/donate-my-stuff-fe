@@ -1,3 +1,5 @@
+const webpack = require('webpack')
+
 module.exports = {
   entry: {
     main: "./lib/index.js",
@@ -12,5 +14,11 @@ module.exports = {
       { test: /\.scss$/, loaders: ["style-loader", "css-loader", "sass-loader"] },
       { test: /\.(png|svg|jpg|gif)$/, loaders: ["file-loader"] }
     ]
-  }
+  },
+  plugins: [
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery"
+    })
+  ]
 }

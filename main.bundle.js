@@ -44,27 +44,58 @@
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	import './images/background.jpg';
+	'use strict';
+
 	__webpack_require__(1);
+	__webpack_require__(2);
+	__webpack_require__(3);
+	__webpack_require__(4);
+	__webpack_require__(5);
+	__webpack_require__(9);
+	__webpack_require__(12);
 
 /***/ }),
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
+	module.exports = __webpack_require__.p + "ae4bfc99b89de07931a039f128ce789e.jpg";
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "8d405b05857f00335a7a63091fcb3b59.png";
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "0ba66bad54ab998f622cb91e1fdbe800.png";
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "735bf095ed46b829456435c54ba87c2e.png";
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(2);
+	var content = __webpack_require__(6);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(4)(content, {});
+	var update = __webpack_require__(8)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../node_modules/css-loader/index.js!../node_modules/sass-loader/index.js!./style.scss", function() {
-				var newContent = require("!!../node_modules/css-loader/index.js!../node_modules/sass-loader/index.js!./style.scss");
+			module.hot.accept("!!../node_modules/css-loader/index.js!../node_modules/sass-loader/index.js!./skeleton.scss", function() {
+				var newContent = require("!!../node_modules/css-loader/index.js!../node_modules/sass-loader/index.js!./skeleton.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -74,21 +105,21 @@
 	}
 
 /***/ }),
-/* 2 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(3)();
+	exports = module.exports = __webpack_require__(7)();
 	// imports
-	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Lato|Signika);", ""]);
+
 
 	// module
-	exports.push([module.id, "body {\n  margin: 0;\n  padding: 0;\n  display: grid;\n  grid-template-columns: repeat(12, 1fr);\n  grid-template-rows: repeat(12, 1fr);\n  width: 100vw;\n  height: 100vh;\n  background: url(\"/images/background.jpg\") repeat; }\n\nnav {\n  grid-area: 1 / 1 / span 1 / span 12;\n  margin: 0;\n  display: flex;\n  justify-content: space-around;\n  align-items: center;\n  background-color: #fbfdfd; }\n\nheader {\n  grid-area: 2 / 1 / span 3 / span 12;\n  display: flex;\n  justify-content: center;\n  background: url(\"https://cdn.firespring.com/images/a9f9a03c-0e8d-4fd8-ac26-748a04f25f20.jpg\") no-repeat;\n  background-size: 100%;\n  background-color: #ff3b3f; }\n\nmain {\n  grid-area: 5 / 1 / span 8 / span 8; }\n\naside {\n  grid-area: 5 / 9 / span 8 / span 4;\n  padding: 0 2rem; }\n\nfooter {\n  height: 2rem; }\n\n.navigation-title {\n  font-size: 1rem;\n  font-family: 'Lato', sans-serif;\n  font-weight: bold; }\n\n.login-button {\n  height: 2rem; }\n\n.search-form {\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n\n.zipcode-search {\n  width: 30rem;\n  height: 3rem;\n  border-radius: 0.3rem;\n  font: 2rem 'Lato', sans-serif;\n  padding: 0 1rem;\n  outline: none; }\n\n.search-button {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 3rem;\n  width: 7rem;\n  border-radius: 0.3rem;\n  margin: 1rem;\n  background-color: #FF3B3F; }\n\n.magnifying-glass {\n  width: 2rem; }\n\n.sub-header {\n  color: #A9A9A9;\n  display: flex;\n  flex-direction: column;\n  align-items: center; }\n", ""]);
+	exports.push([module.id, "body {\n  margin: 0;\n  padding: 0; }\n\n.grid {\n  display: grid;\n  grid-template-columns: repeat(12, 1fr);\n  grid-template-rows: repeat(12, 1fr);\n  width: 100vw;\n  height: 100vh; }\n\nnav {\n  margin: 0;\n  display: flex;\n  justify-content: space-around;\n  align-items: center;\n  width: 100%; }\n\nheader {\n  grid-area: 1 / 1 / span 5 / span 12;\n  display: flex;\n  justify-content: center; }\n\nmain {\n  grid-area: 6 / 1 / span 6 / span 8; }\n\naside {\n  grid-area: 6 / 9 / span 6 / span 4;\n  padding: 0 2rem; }\n\nfooter {\n  height: 2rem; }\n", ""]);
 
 	// exports
 
 
 /***/ }),
-/* 3 */
+/* 7 */
 /***/ (function(module, exports) {
 
 	/*
@@ -144,7 +175,7 @@
 
 
 /***/ }),
-/* 4 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/*
@@ -394,6 +425,64 @@
 			URL.revokeObjectURL(oldSrc);
 	}
 
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(10);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(8)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!../node_modules/css-loader/index.js!../node_modules/sass-loader/index.js!./style.scss", function() {
+				var newContent = require("!!../node_modules/css-loader/index.js!../node_modules/sass-loader/index.js!./style.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(7)();
+	// imports
+	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Lato|Signika);", ""]);
+
+	// module
+	exports.push([module.id, "body {\n  background: url(" + __webpack_require__(1) + ") repeat; }\n\nnav {\n  position: relative;\n  background-color: #fbfdfd; }\n  nav .nav-title {\n    display: flex;\n    align-items: center;\n    color: #a9a9a9;\n    font-family: 'Lato', sans-serif;\n    font-size: 1.5rem; }\n    nav .nav-title .nav-logo {\n      max-width: 3rem; }\n  nav .nav-menu .nav-link {\n    color: #a9a9a9;\n    text-decoration: none;\n    padding: 0 2rem;\n    font-family: 'Signika', sans-serif;\n    font-size: 1rem;\n    font-weight: 100; }\n  nav .nav-menu .nav-link:hover {\n    color: #ff3b3f; }\n\nheader {\n  position: relative;\n  background: url(" + __webpack_require__(11) + ") no-repeat center center;\n  background-size: cover; }\n  header .search-form {\n    display: flex;\n    justify-content: center;\n    align-items: center; }\n    header .search-form .zipcode-search {\n      width: 30rem;\n      height: 3rem;\n      border-radius: 0.3rem;\n      font: 2rem 'Lato', sans-serif;\n      padding: 0 1rem;\n      outline: none;\n      margin: 0.5rem; }\n    header .search-form .search-button {\n      display: flex;\n      justify-content: center;\n      align-items: center;\n      height: 3rem;\n      width: 7rem;\n      border-radius: 0.3rem;\n      margin: 0.5rem;\n      background-color: #FF3B3F; }\n      header .search-form .search-button .magnifying-glass {\n        width: 2rem; }\n\n.sub-header {\n  color: #a9a9a9;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  padding: 1rem; }\n", ""]);
+
+	// exports
+
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "549b5ed9b589dfac47f99cb7be6bb400.jpg";
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports) {
+
+	'use strict';
+
+	$('.search-form').submit(function (event) {
+	  event.preventDefault();
+	  console.log('user inputed: ' + $('.zipcode-search').val());
+	  debugger;
+	});
 
 /***/ })
 /******/ ]);
