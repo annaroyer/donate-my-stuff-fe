@@ -1,6 +1,9 @@
 body {
   margin: 0;
   padding: 0;
+}
+
+.grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 1fr);
@@ -9,26 +12,26 @@ body {
 }
 
 nav {
-  grid-area: 1 / 1 / span 1 / span 12;
   margin: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  padding: 0 12rem;
+  width: 100%;
+
 }
 
 header {
-  grid-area: 2 / 1 / span 5 / span 12;
+  grid-area: 1 / 1 / span 5 / span 12;
   display: flex;
   justify-content: center;
 }
 
 main {
-  grid-area: 7 / 1 / span 6 / span 8;
+  grid-area: 6 / 1 / span 6 / span 8;
 }
 
 aside {
-  grid-area: 7 / 9 / span 6 / span 4;
+  grid-area: 6 / 9 / span 6 / span 4;
   padding: 0 2rem;
 }
 
