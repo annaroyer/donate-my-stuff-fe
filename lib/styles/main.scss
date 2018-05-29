@@ -2,6 +2,7 @@
 
 $watermelon: #ff3b3f;
 $carbon: #a9a9a9;
+$smog: #545454;
 $sky: #c2ebef;
 $pale-sky: #cbeaed;
 $cream: #fbfdfd;
@@ -86,12 +87,13 @@ header {
 }
 
 .blue-text {
-  color: $carbon;
+  color: $smog;
   font: {
-    family: 'Lato', sans-serif;
+    family: 'Signika', sans-serif;
     size: 1rem;
-    weight: thin;
+    weight: 300;
   }
   background-color: $sky;
   margin: 1rem;
+  line-height: 1rem;
 }
