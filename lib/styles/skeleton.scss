@@ -26,9 +26,9 @@ header {
   justify-content: center;
 }
 
-main {
+.data-container {
   grid-area: 6 / 1 / span 6 / span 8;
-  padding: 0 3rem;
+  padding: 0 1rem;
 }
 
 aside {
@@ -47,6 +47,7 @@ footer {
 
 .centered {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
