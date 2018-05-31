@@ -14,10 +14,14 @@ body {
 nav {
   position: relative;
   background-color: $cream;
+  box-shadow: 4px 2px 2px 1px $cream;
+  margin: 0;
   .nav-title {
     display: flex;
     align-items: center;
     color: $carbon;
+    text-decoration: none;
+    line-height: 4.5rem;
     font: {
       family: 'Lato', sans-serif;
       size: 1.5rem;
@@ -25,6 +29,9 @@ nav {
     .nav-logo {
       max-width: 3rem;
     }
+  }
+  .nav-title:hover {
+    color: $watermelon;
   }
   .nav-menu {
     .nav-link {
@@ -69,6 +76,7 @@ header {
       border-radius: 0.3rem;
       margin: 0.5rem;
       background-color: #FF3B3F;
+      outline: none;
       .magnifying-glass {
         width: 2rem;
       }
@@ -95,5 +103,31 @@ header {
   }
   background-color: $sky;
   margin: 1rem;
-  line-height: 1rem;
+  padding: 1rem;
+  width: 50%;
+}
+
+.organization {
+  width: 22rem;
+  padding: 3rem;
+}
+
+.label-text {
+  color: $smog;
+  font: {
+    family: 'Signika', sans-serif;
+    size: 1rem;
+    weight: 300;
+  }
+}
+
+.small-form {
+  line-height: 1.5rem;
+  border-radius: 0.5rem;
+  font:{
+    size: 1rem;
+    weight: 100;
+
+  }
+  outline: none;
 }
