@@ -1,0 +1,22 @@
+.sub-header {
+  font-family: 'Signika', sans-serif;
+  color: $carbon;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background: url("../images/red-dots.png") no-repeat center bottom;
+}
+
+.blue-text {
+  color: $smog;
+  font: {
+    family: 'Signika', sans-serif;
+    size: 1rem;
+    weight: 300;
+  }
+  background-color: $sky;
+  margin: 1rem;
+  padding: 1rem;
+  width: 50%;
+}

@@ -1,0 +1,36 @@
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  .arrow-button {
+    width: 10rem;
+    position: absolute;
+    border-radius: 0.5rem;
+    color: $smog;
+    font:{
+      family: 'Lato', sans-serif;
+      weight: 300;
+      size: 0.9rem;
+    }
+    padding: 0.5rem;
+    text-decoration: none;
+    border: 0.1rem solid $cream;
+    background: $watermelon url('../images/right-arrow.svg') no-repeat;
+    background-position: right 5% center;
+    background-size:  1.5rem 2.5rem;
+  }
+}
+
+.search-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  width: 7rem;
+  border-radius: 0.3rem;
+  margin: 0.5rem;
+  background-color: $watermelon;
+  outline: none;
+  .magnifying-glass {
+    width: 2rem;
+  }
+}
