@@ -1,3 +1,17 @@
+%regular-text {
+  color: $smog;
+  font: {
+    family: 'Signika', sans-serif;
+    size: 1rem;
+    weight: 300;
+  }
+}
+
+%blue-fill {
+  background-color: $sky;
+  padding: 1rem;
+}
+
 .sub-header {
   font-family: 'Signika', sans-serif;
   color: $carbon;
@@ -9,14 +23,25 @@
 }
 
 .blue-text {
-  color: $smog;
-  font: {
-    family: 'Signika', sans-serif;
-    size: 1rem;
-    weight: 300;
-  }
-  background-color: $sky;
-  margin: 1rem;
+  @extend %regular-text;
+  @extend %blue-fill;
   padding: 1rem;
   width: 50%;
+}
+
+.message {
+  @extend %blue-fill;
+  @extend %regular-text;
+  display: none;
+  grid-area: 1 / 3 / span 12 / span 8;
+  font-size: 2rem;
+  margin: 0;
+  padding: 15%;
+  box-shadow: 0 -1rem 15rem $smog;;
+  text-align: center;
+}
+
+.error {
+  color: $watermelon;
+  margin: 0 20%;
 }
