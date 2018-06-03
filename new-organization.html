@@ -17,7 +17,24 @@
         <a href="#" class="nav-link">login</a>
       </section>
     </nav>
-    <main>
+    <main class="grid">
+      <h1 class="message">
+        Thank you for registering your organization!<br /><br />
+        You will be notified via email of your approval within the next business day.
+      </h1>
+      </h1>
+      <form class="register-organization column-form">
+        <label class="label-text">Organization</label>
+        <input class="medium-input" name="name" placeholder="Name" />
+        <textarea class="medium-input" name="description" placeholder="Description"></textarea>
+        <input class="medium-input" type="link" name="website" placeholder="Website" />
+        <label class="label-text">Contact Person</label>
+        <input class="medium-input" name="first_name" placeholder="First Name" />
+        <input class="medium-input" name="last_name" placeholder="Last Name" />
+        <input class="medium-input" type="email" name="email" placeholder="Email" />
+        <input class="medium-input" type="tel" name="phone" placeholder="Phone Number" />
+        <input class="medium-input" type="submit" value="Register"/>
+      </form>
     </main>
     <script src="main.bundle.js"></script>
   </body>
