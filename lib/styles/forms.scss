@@ -1,0 +1,80 @@
+.search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .zipcode-search {
+    width: 30rem;
+    height: 3rem;
+    border-radius: 0.3rem;
+    font: 2rem 'Lato', sans-serif;
+    padding: 0 1rem;
+    outline: none;
+    margin: 0.5rem;
+  }
+}
+
+.label-text {
+  color: $smog;
+  font: {
+    family: 'Signika', sans-serif;
+    size: 1rem;
+    weight: 300;
+  }
+  margin: 2% 0 0 20%;
+}
+
+.small-form {
+  line-height: 1.5rem;
+  border-radius: 0.5rem;
+  font:{
+    size: 1rem;
+    weight: 100;
+  }
+  outline: none;
+  margin-bottom: 1rem;
+}
+
+.column-form {
+  display: inline-grid;
+}
+
+.register-organization {
+  grid-area: 1 / 3 / span 12 / span 8;
+    background: linear-gradient(rgba(203,234,237, 0.55), rgba(194,235,239, 0.45));
+    box-shadow: 0 -1rem 15rem $smog;
+    align-items: center;
+    align-content: start;
+    padding-top: 1%;
+  .medium-input {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    font: {
+      family: 'Signika', sans-serif;
+      size: 1.2rem;
+      weight: 100;
+    }
+    outline: none;
+    margin: 0.5rem 20%;
+  }
+  textarea {
+    height: 5rem;
+    border: 2px inset;
+  }
+  .label-text {
+    font-size: 2rem;
+  }
+  input[type="submit"] {
+    margin-top: 2%;
+    border: 2px inset;
+  }
+
+  input[type="submit"]:hover {
+    border-top: none;
+    border-left: none;
+    box-shadow: -0.2rem -0.2rem 0.3rem $carbon;
+  }
+}
+
+.red-border {
+  border-color: $watermelon;
+}

@@ -12,11 +12,11 @@
       </a>
       <section class="nav-menu">
         <a href="organizations.html" class="nav-link">organizations</a>
-        <a href="#" class="nav-link">join</a>
+        <a href="new-user.html" class="nav-link">join</a>
         <a href="#" class="nav-link">login</a>
       </section>
     </nav>
-    <section class="grid">
+    <main class="grid">
       <header>
         <form class="search-form">
           <input type="text" class="zipcode-search" name="zipcode" placeholder="Search Your Zipcode" />
@@ -25,38 +25,40 @@
           </button>
         </form>
       </header>
-      <main class="data-container">
+      <section class="data-container">
         <h1 class="sub-header">
           Organizations
         </h1>
         <div class="centered">
         </div>
-      </main>
+      </section>
       <aside class="right-sidebar">
         <h1 class="sub-header">
           Advanced Search
         </h1>
-        <form class="data-content">
-          <label class="label-text">Zipcode</label>
-          <input class="small-form" type="text" name="zipcode" />
-          <label class="label-text">Dates</label>
-          <input class="small-form" id="startDate" type="date"/>
-          <input class="small-form" id="endDate" type="date"/>
-          <label class="label-text">Items Accepted</label>
-          <select class="small-form" type="select" name="items" multiple size=5>
-            <option value="household items" selected="selected">Household Items</option>
-            <option value="furniture">Furniture</option>
-            <option value="clothing and accessories">Clothing and Accessories</option>
-            <option value="school supplies">School Supplies</option>
-          </select>
-          <label class="label-text">Organizations</label>
-          <select class="small-form" type="select" name="organizations" multiple></select>
-          <input class="advanced-search-submit" type="submit" />
+        <form class="column-form">
+            <label class="label-text">Zipcode</label>
+            <input class="small-form" type="text" name="zipcode" />
+            <label class="label-text">Dates</label>
+            <input class="small-form" id="startDate" type="date"/>
+            <input class="small-form" id="endDate" type="date"/>
+            <label class="label-text">Items Accepted</label>
+            <select class="small-form" type="select" name="items" multiple size=5>
+              <option value="household items" selected="selected">Household Items</option>
+              <option value="furniture">Furniture</option>
+              <option value="clothing and accessories">Clothing and Accessories</option>
+              <option value="school supplies">School Supplies</option>
+            </select>
+            <label class="label-text">Organizations</label>
+            <select class="small-form" type="select" name="organizations" multiple></select>
+            <button type="submit" class="search-button">
+              <img src="/lib/images/magnifying-glass.png" class="magnifying-glass"/>
+            </button>
         </form>
       </aside>
-    </section>
-      <footer>
-      </footer>
-      <script src="main.bundle.js"></script>
+    </main>
+    <footer>
+    </footer>
+    <script src="main.bundle.js"></script>
   </body>
 </html>
