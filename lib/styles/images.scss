@@ -7,3 +7,8 @@
 .many-orgs-image {
   max-width: 20rem;
 }
+
+.single-org-image {
+  max-width: 30rem;
+  grid-area: 2 / auto / auto / 6;
+}
