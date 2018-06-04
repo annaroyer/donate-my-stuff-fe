@@ -1,0 +1,36 @@
+.organization {
+  width: 22rem;
+  padding: 3rem;
+}
+
+.organization-aside {
+  @extend %column;
+  justify-content: space-evenly;
+  grid-area: 2 / 7 / auto / auto;
+  .small-list {
+    margin: 0;
+    min-width: max-content;
+  }
+}
+
+.organization-description {
+  grid-area: 3 / 5 / auto / 9;
+}
+
+.pickup-container {
+  @extend %column;
+  grid-area: 6 / 1 / auto / 13;
+  display: flex;
+  align-items: center;
+}
+
+.pickup {
+  @extend %regular-text;
+  @extend %blue-fill;
+  font-size: 1.2rem;
+  width: 75%;
+  display: inline-grid;
+  box-shadow: 0.5rem 0.5rem 1rem $carbon;
+  border-radius: 0.7rem;
+  margin: 2rem;
+}
