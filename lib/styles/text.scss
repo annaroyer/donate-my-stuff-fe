@@ -7,19 +7,31 @@
   }
 }
 
+%header-text {
+  font-family: 'Signika', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url("../images/red-dots.png") no-repeat center bottom;
+}
+
 %blue-fill {
   background-color: $sky;
   padding: 1rem;
 }
 
 .sub-header {
-  font-family: 'Signika', sans-serif;
+  @extend %header-text;
   color: $carbon;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding: 1rem;
-  background: url("../images/red-dots.png") no-repeat center bottom;
+}
+
+.large-header {
+  @extend %header-text;
+  color: $smog;
+  font-size: 3rem;
+  padding: 0;
+  grid-area: 1 / 4 / span 1 / span 6;
 }
 
 .blue-text {
@@ -44,4 +56,22 @@
 .error {
   color: $watermelon;
   margin: 0 20%;
+}
+
+.normal {
+  @extend %regular-text;
+  font-size: 1.2rem;
+}
+
+.schedule-link, .website-link {
+  @extend %regular-text;
+  font-size: 1.2rem;
+}
+
+.schedule-link:hover, .website-link:hover {
+  color: $watermelon;
+}
+
+.schedule-link {
+  place-self: flex-end;
 }
