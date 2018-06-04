@@ -26,6 +26,16 @@
   padding: 1rem;
 }
 
+.organization-link {
+  text-decoration: none;
+}
+
+a.organization-link:hover {
+  .sub-header {
+    color: $smog;    
+  }
+}
+
 .large-header {
   @extend %header-text;
   color: $smog;
