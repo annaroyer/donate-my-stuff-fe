@@ -35,3 +35,16 @@
     width: 2rem;
   }
 }
+
+.done-button {
+  color: $smog;
+  font-size: 1rem;
+  text-decoration: none;
+  margin: 0.5rem;
+  border: 0.2rem solid $smog;
+  height: 2rem;
+  border-radius: 0.3rem;
+  background-color: $sky;
+  padding: 0.5rem;
+  outline: none;
+}
