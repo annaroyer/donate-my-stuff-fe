@@ -20,7 +20,6 @@
     size: 1rem;
     weight: 300;
   }
-  margin: 2% 0 0 20%;
 }
 
 .small-form {
@@ -132,4 +131,9 @@
 .modalDialog:target {
 	opacity:1;
 	pointer-events: auto;
+}
+
+input[type="checkbox"] {
+  min-width: 1rem;
+  border-radius: 0.5rem;
 }
