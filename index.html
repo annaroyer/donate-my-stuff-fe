@@ -58,14 +58,14 @@
       </aside>
     </main>
     <div id="openRegistration" class="modalDialog">
-      <div>
-        <form>
+      <div class="modal-box">
+        <form class="register-donor-pickup">
           <a href="#close" title="Close" class="close">X</a>
           <label class="normal">Address</label>
           <input class="medium-input" type="text" name="street_address" placeholder="Street Address" />
           <input class="medium-input" type="text" name="city" placeholder ="City" />
           <select class="medium-input" name="state">
-            <option value="" disabled selected hidden>State</option
+            <option value="" disabled selected hidden>State</option>
           	<option value="AL">Alabama</option>
           	<option value="AK">Alaska</option>
           	<option value="AZ">Arizona</option>
@@ -122,7 +122,11 @@
           <label class="normal">Contact</label>
           <input class="medium-input" type="tel" name="phone" placeholder="Phone" />
           <input class="medium-input" type="email" name="email" placeholder="Email" />
+          <input type="hidden" value=1/>
           <input class="medium-input" type="submit" value="Register For Pickup" />
+          <div class="donor-registration-message">
+            <h1>Registration</h1>
+          </div>
         </form>
       </div>
     </div>
