@@ -20,7 +20,6 @@
     size: 1rem;
     weight: 300;
   }
-  margin: 2% 0 0 20%;
 }
 
 .small-form {
@@ -38,6 +37,18 @@
   display: inline-grid;
 }
 
+.medium-input {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font: {
+    family: 'Signika', sans-serif;
+    size: 1.2rem;
+    weight: 100;
+  }
+  outline: none;
+  margin: 0.5rem 20%;
+}
+
 .register-organization {
   grid-area: 1 / 3 / span 12 / span 8;
     background: linear-gradient(rgba(203,234,237, 0.55), rgba(194,235,239, 0.45));
@@ -45,17 +56,6 @@
     align-items: center;
     align-content: start;
     padding-top: 1%;
-  .medium-input {
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    font: {
-      family: 'Signika', sans-serif;
-      size: 1.2rem;
-      weight: 100;
-    }
-    outline: none;
-    margin: 0.5rem 20%;
-  }
   textarea {
     height: 5rem;
     border: 2px inset;
@@ -77,4 +77,62 @@
 
 .red-border {
   border-color: $watermelon;
+}
+
+.modalDialog {
+	position: fixed;
+	font-family: 'Signika', sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+  opacity: 0;
+	transition: opacity 400ms ease-in;
+  pointer-events: none;
+  div {
+  	width: 30rem;
+  	position: relative;
+  	margin: 10% auto;
+  	padding: 2rem;
+  	border-radius: 0.8rem;
+  	background: $cream;
+    form {
+      display: inline-grid;
+      width: 100%;
+      input[type="submit"]{
+        box-shadow: 0.1rem 0.1rem 0.2rem $smog;
+      }
+      select {
+        border: 2px inset;
+        color: $smog;
+        line-height: 2rem;
+      }
+    }
+  }
+  .close {
+    background: $smog;
+    color: $cream;
+    line-height: 1.5rem;
+    position: absolute;
+    right: -0.75rem;
+    text-align: center;
+    top: -0.6rem;
+    width: 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 0.75rem;
+    box-shadow: 0.1rem 0.1rem 0.3rem black;
+}
+.close:hover { background: #00d9ff; }
+}
+
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+.no-transition {
+  transition: none;
 }

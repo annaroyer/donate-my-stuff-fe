@@ -3,9 +3,13 @@
   flex-direction: column;
 }
 
-body {
+%unframed {
   margin: 0;
   padding: 0;
+}
+
+body {
+  @extend %unframed;
   background: url('../images/background.jpg') repeat;
 }
 
@@ -25,7 +29,7 @@ header {
   position: relative;
   background: url('../images/pile-of-stuff.jpg') no-repeat center center;
   background-size: cover;
-  min-height: 10rem;
+  min-height: 20rem;
 }
 
 .data-container {
@@ -34,9 +38,10 @@ header {
 }
 
 aside {
-  grid-area: 6 / 9 / auto / span 3;
+  grid-area: 6 / 9 / auto / span 4;
   @extend %column;
   align-items: center;
+  padding: 0 1rem 0 0;
 }
 
 footer {
@@ -57,4 +62,13 @@ footer {
 .even-rows {
   display: flex;
   justify-content: space-evenly;
+}
+
+.spaced {
+  display: flex;
+  justify-content: space-between;
+}
+
+.unframed {
+  @extend %unframed;
 }
