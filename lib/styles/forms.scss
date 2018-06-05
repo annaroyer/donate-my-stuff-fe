@@ -133,7 +133,6 @@
 	pointer-events: auto;
 }
 
-input[type="checkbox"] {
-  min-width: 1rem;
-  border-radius: 0.5rem;
+.no-transition {
+  transition: none;
 }
