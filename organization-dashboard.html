@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Donate My Stuff</title>
+  </head>
+  <body>
+    <nav class="navigation">
+      <a href="index.html" class="nav-title">
+        <img src="./lib/images/logo.png" class="nav-logo" />
+        Donate My Stuff
+      </a>
+      <section class="nav-menu">
+        <a href="organizations.html" class = "active nav-link">organizations</a>
+        <a href="organization-dashboard.html?id=1" id="join-link" class="nav-link">dashboard</a>
+        <a href="#regularLogin" id="nav-login" class="nav-link">logout</a>
+      </section>
+    </nav>
+    <main class="grid">
+      <h1 class="large-header"></h1>
+      <img class="single-org-image" src="">
+      <div class="organization-aside">
+        <a class="website-link" href=""></a>
+        <figure class="normal small-list">
+          <figcaption>Accepting:</figcaption>
+        </figure>
+      </div>
+      <p class="normal organization-description"></p>
+      <section class="pickup-container">
+        <h1 class="sub-header">Upcoming Pickups</h1>
+        <button id="new-pickup" class="done-button">Add Pickup</button>
+        <form id="pickup-form">
+          <center>
+            <input class="medium-input" type="date" name="date" placeholder="Date" />
+          </center>
+          <div class="centered">
+            <select class="small-form" type="select" name="items" multiple size=5>
+              <option value="household items" selected="selected">Household Items</option>
+              <option value="furniture">Furniture</option>
+              <option value="clothing and accessories">Clothing and Accessories</option>
+              <option value="school supplies">School Supplies</option>
+            </select>
+          </div>
+          <div class="centered">
+            <input class="medium-input" type="text" name="zipcodes" placeholder="Zipcodes Covered" />
+            <a id="add-zippy" class="done-button">Add Zipcode</a>
+            </div>
+            <ul id="zip-list">
+
+            </ul>
+          <input class="medium-input" type="submit" value="Create Pickup"/>
+        </form>
+        <div class="pickup">
+          <center></center>
+            <p><bold>Also Accepting: </bold><br /></p>
+            <p><bold>Zipcodes: </bold><br /></p>
+            <div class="even-rows">
+              <div>
+                <input type="checkbox" name="pickup_id" />
+                <label>Choose this Pickup</label>
+              </div>
+              <a href="#openRegistration" class="schedule-link">Schedule Pickup >>></a>
+            </div>
+        </div>
+      <section>
+    </main>
+    <div id="regularLogin" class="modalDialog no-transition">
+      <div class="modal-box">
+        <form class="login-form">
+          <a href="#close" title="Close" class="close">X</a>
+          <label class="label-text">Email</label>
+          <input class="medium-input" type="email" name="email" placeholder="Email" />
+          <label class="label-text" for="password">Password</label>
+          <input class="medium-input" type="password" name="password" placeholder="Password"/>
+          <input class="medium-input" type="submit" value="Log In" />
+          <a href="#organizationLogin" class="arrow-button">Organization Login</a>
+        </form>
+      </div>
+    </div>
+    <div id="organizationLogin" class="modalDialog no-transition">
+      <div class="modal-box">
+        <form id="orgLogin" class="login-form">
+          <a href="#close" title="Close" class="close">X</a>
+          <label class="label-text">Organization</label>
+          <select class="medium-input" type="select" name="organizations" multiple></select>
+          <label class="label-text">Contact Email</label>
+          <input class="medium-input" type="email" name="email" placeholder="Email"/>
+          <label class="label-text" for="password">Password</label>
+          <input class="medium-input" type="password" name="password" placeholder="Password"/>
+          <input class="medium-input" type="submit" value="Log In" />
+        </form>
+      </div>
+    </div>
+    <div id="userRegistration" class="modalDialog no-transition">
+      <div class="modal-box">
+        <form class="login-form">
+          <a href="#close" title="Close" class="close">X</a>
+          <a href="new-organization.html" class="schedule-link">Register an Organization >>></a>
+          <h1 class="modal-header">
+            <img src="./lib/images/logo.png" class="nav-logo" />
+            Register for an Account
+          </h1>
+          <label class="label-text">First Name</label>
+          <input class="medium-input" name="first_name" placeholder="First Name" />
+          <label class="label-text">First Name</label>
+          <input class="medium-input" name="last_name" placeholder="Last Name" />
+          <label class="label-text">Email</label>
+          <input class="medium-input" type="email" name="email" placeholder="Email"/>
+          <label class="label-text">Phone</label>
+          <input class="medium-input" type="tel" name="phone" placeholder="phone"/>
+          <label class="label-text" for="password">Password</label>
+          <input class="medium-input" type="password" name="password" placeholder="Password"/>
+          <input class="medium-input" type="submit" value="Register" />
+        </form>
+      </div>
+    </div>
+    <script src="main.bundle.js"></script>
+  </body>
+</html>
