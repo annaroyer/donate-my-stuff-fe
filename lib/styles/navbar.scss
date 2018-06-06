@@ -6,7 +6,6 @@ nav {
   justify-content: space-around;
   margin: 0;
   background-color: $cream;
-  box-shadow: 4px 2px 2px 1px $cream;
   .nav-title {
     display: flex;
     align-items: center;
@@ -16,6 +15,7 @@ nav {
     font: {
       family: 'Lato', sans-serif;
       size: 1.5rem;
+      weight: bolder;
     }
     .nav-logo {
       max-width: 3rem;
@@ -31,7 +31,7 @@ nav {
       padding: 0 2rem;
       font: {
         family: 'Signika', sans-serif;
-        size: 1rem;
+        size: 1.1rem;
         weight: 100;
       }
     }
