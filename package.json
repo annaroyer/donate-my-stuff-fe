@@ -33,5 +33,7 @@
     "webpack-cli": "^2.1.4",
     "webpack-dev-server": "^1.16.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "firebase": "^5.0.4"
+  }
 }

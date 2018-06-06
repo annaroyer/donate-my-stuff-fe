@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8" />
     <title>Donate My Stuff</title>
-    <script type="text/javascript" src="./lib/scripts/organizations.js"></script>
   </head>
   <body>
     <nav class="navigation">
@@ -12,29 +11,58 @@
         Donate My Stuff
       </a>
       <section class="nav-menu">
-        <a href="organizations.html" class = "nav-link">organizations</a>
-        <a href="#userRegistration" id="join-link" class="active nav-link">join</a>
-        <a href="#regularLogin" id="nav-login" class="nav-link">login</a>
+        <a href="organizations.html" class = "active nav-link">organizations</a>
+        <a href="organization-dashboard.html?id=1" id="join-link" class="nav-link">dashboard</a>
+        <a href="#regularLogin" id="nav-login" class="nav-link">logout</a>
       </section>
     </nav>
     <main class="grid">
-      <h1 class="message">
-        Thank you for registering your organization!<br /><br />
-        You will be notified via email of your approval within the next business day.
-      </h1>
-      </h1>
-      <form class="register-organization column-form">
-        <label class="label-text">Organization</label>
-        <input class="medium-input" name="name" placeholder="Name" />
-        <textarea class="medium-input" name="description" placeholder="Description"></textarea>
-        <input class="medium-input" type="link" name="website" placeholder="Website" />
-        <label class="label-text">Contact Person</label>
-        <input class="medium-input" name="first_name" placeholder="First Name" />
-        <input class="medium-input" name="last_name" placeholder="Last Name" />
-        <input class="medium-input" type="email" name="email" placeholder="Email" />
-        <input class="medium-input" type="tel" name="phone" placeholder="Phone Number" />
-        <input class="medium-input" type="submit" value="Register"/>
-      </form>
+      <h1 class="large-header"></h1>
+      <img class="single-org-image" src="">
+      <div class="organization-aside">
+        <a class="website-link" href=""></a>
+        <figure class="normal small-list">
+          <figcaption>Accepting:</figcaption>
+        </figure>
+      </div>
+      <p class="normal organization-description"></p>
+      <section class="pickup-container">
+        <h1 class="sub-header">Upcoming Pickups</h1>
+        <button id="new-pickup" class="done-button">Add Pickup</button>
+        <form id="pickup-form">
+          <center>
+            <input class="medium-input" type="date" name="date" placeholder="Date" />
+          </center>
+          <div class="centered">
+            <select class="small-form" type="select" name="items" multiple size=5>
+              <option value="household items" selected="selected">Household Items</option>
+              <option value="furniture">Furniture</option>
+              <option value="clothing and accessories">Clothing and Accessories</option>
+              <option value="school supplies">School Supplies</option>
+            </select>
+          </div>
+          <div class="centered">
+            <input class="medium-input" type="text" name="zipcodes" placeholder="Zipcodes Covered" />
+            <a id="add-zippy" class="done-button">Add Zipcode</a>
+            </div>
+            <ul id="zip-list">
+
+            </ul>
+          <input class="medium-input" type="submit" value="Create Pickup"/>
+        </form>
+        <div class="pickup">
+          <center></center>
+            <p><bold>Also Accepting: </bold><br /></p>
+            <p><bold>Zipcodes: </bold><br /></p>
+            <div class="even-rows">
+              <div>
+                <input type="checkbox" name="pickup_id" />
+                <label>Choose this Pickup</label>
+              </div>
+              <a href="#openRegistration" class="schedule-link">Schedule Pickup >>></a>
+            </div>
+        </div>
+      <section>
     </main>
     <div id="regularLogin" class="modalDialog no-transition">
       <div class="modal-box">

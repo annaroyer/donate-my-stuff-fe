@@ -12,8 +12,8 @@
       </a>
       <section class="nav-menu">
         <a href="organizations.html" class = "active nav-link">organizations</a>
-        <a href="#" class="nav-link">join</a>
-        <a href="#" class="nav-link">login</a>
+        <a href="#userRegistration" id="join-link" class="nav-link">join</a>
+        <a href="#regularLogin" id="nav-login" class="nav-link">login</a>
       </section>
     </nav>
     <main class="grid">
@@ -42,6 +42,129 @@
         </div>
       <section>
     </main>
+    <div id="openRegistration" class="modalDialog no-transition">
+      <div class="modal-box">
+        <form class="register-donor-pickup">
+          <a href="#close" title="Close" class="close">X</a>
+          <label class="normal">Address</label>
+          <input class="medium-input" type="text" name="street_address" placeholder="Street Address" />
+          <input class="medium-input" type="text" name="city" placeholder ="City" />
+          <select class="medium-input" name="state">
+            <option value="" disabled selected hidden>State</option>
+          	<option value="AL">Alabama</option>
+          	<option value="AK">Alaska</option>
+          	<option value="AZ">Arizona</option>
+          	<option value="AR">Arkansas</option>
+          	<option value="CA">California</option>
+          	<option value="CO">Colorado</option>
+          	<option value="CT">Connecticut</option>
+          	<option value="DE">Delaware</option>
+          	<option value="DC">District Of Columbia</option>
+          	<option value="FL">Florida</option>
+          	<option value="GA">Georgia</option>
+          	<option value="HI">Hawaii</option>
+          	<option value="ID">Idaho</option>
+          	<option value="IL">Illinois</option>
+          	<option value="IN">Indiana</option>
+          	<option value="IA">Iowa</option>
+          	<option value="KS">Kansas</option>
+          	<option value="KY">Kentucky</option>
+          	<option value="LA">Louisiana</option>
+          	<option value="ME">Maine</option>
+          	<option value="MD">Maryland</option>
+          	<option value="MA">Massachusetts</option>
+          	<option value="MI">Michigan</option>
+          	<option value="MN">Minnesota</option>
+          	<option value="MS">Mississippi</option>
+          	<option value="MO">Missouri</option>
+          	<option value="MT">Montana</option>
+          	<option value="NE">Nebraska</option>
+          	<option value="NV">Nevada</option>
+          	<option value="NH">New Hampshire</option>
+          	<option value="NJ">New Jersey</option>
+          	<option value="NM">New Mexico</option>
+          	<option value="NY">New York</option>
+          	<option value="NC">North Carolina</option>
+          	<option value="ND">North Dakota</option>
+          	<option value="OH">Ohio</option>
+          	<option value="OK">Oklahoma</option>
+          	<option value="OR">Oregon</option>
+          	<option value="PA">Pennsylvania</option>
+          	<option value="RI">Rhode Island</option>
+          	<option value="SC">South Carolina</option>
+          	<option value="SD">South Dakota</option>
+          	<option value="TN">Tennessee</option>
+          	<option value="TX">Texas</option>
+          	<option value="UT">Utah</option>
+          	<option value="VT">Vermont</option>
+          	<option value="VA">Virginia</option>
+          	<option value="WA">Washington</option>
+          	<option value="WV">West Virginia</option>
+          	<option value="WI">Wisconsin</option>
+          	<option value="WY">Wyoming</option>
+          </select>
+          <input class="medium-input" type="text" name="zipcode" placeholder ="Zipcode" />
+          <label class="normal">Contact</label>
+          <input class="medium-input" type="tel" name="phone" placeholder="Phone" />
+          <input class="medium-input" type="email" name="email" placeholder="Email" />
+          <input type="hidden" value=1/>
+          <input class="medium-input" type="submit" value="Register For Pickup" />
+          <div class="donor-registration-message">
+            <h1>Registration</h1>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div id="regularLogin" class="modalDialog no-transition">
+      <div class="modal-box">
+        <form class="login-form">
+          <a href="#close" title="Close" class="close">X</a>
+          <label class="label-text">Email</label>
+          <input class="medium-input" type="email" name="email" placeholder="Email" />
+          <label class="label-text" for="password">Password</label>
+          <input class="medium-input" type="password" name="password" placeholder="Password"/>
+          <input class="medium-input" type="submit" value="Log In" />
+          <a href="#organizationLogin" class="arrow-button">Organization Login</a>
+        </form>
+      </div>
+    </div>
+    <div id="organizationLogin" class="modalDialog no-transition">
+      <div class="modal-box">
+        <form id="orgLogin" class="login-form">
+          <a href="#close" title="Close" class="close">X</a>
+          <label class="label-text">Organization</label>
+          <input class="medium-input" type="text" name="organizations" placeholder="Organization Name">
+          <label class="label-text">Contact Email</label>
+          <input class="medium-input" type="email" name="email" placeholder="Email"/>
+          <label class="label-text" for="password">Password</label>
+          <input class="medium-input" type="password" name="password" placeholder="Password"/>
+          <input class="medium-input" type="submit" value="Log In" />
+        </form>
+      </div>
+    </div>
+    <div id="userRegistration" class="modalDialog no-transition">
+      <div class="modal-box">
+        <form class="login-form">
+          <a href="#close" title="Close" class="close">X</a>
+          <a href="new-organization.html" class="schedule-link">Register an Organization >>></a>
+          <h1 class="modal-header">
+            <img src="./lib/images/logo.png" class="nav-logo" />
+            Register for an Account
+          </h1>
+          <label class="label-text">First Name</label>
+          <input class="medium-input" name="first_name" placeholder="First Name" />
+          <label class="label-text">First Name</label>
+          <input class="medium-input" name="last_name" placeholder="Last Name" />
+          <label class="label-text">Email</label>
+          <input class="medium-input" type="email" name="email" placeholder="Email"/>
+          <label class="label-text">Phone</label>
+          <input class="medium-input" type="tel" name="phone" placeholder="phone"/>
+          <label class="label-text" for="password">Password</label>
+          <input class="medium-input" type="password" name="password" placeholder="Password"/>
+          <input class="medium-input" type="submit" value="Register" />
+        </form>
+      </div>
+    </div>
     <script src="main.bundle.js"></script>
   </body>
 </html>

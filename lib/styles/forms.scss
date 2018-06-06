@@ -149,3 +149,17 @@
 .no-transition {
   transition: none;
 }
+
+.login-form {
+  .label-text {
+    margin: 0 20%;
+  }
+  .arrow-button {
+    justify-self: end;
+    margin: 2rem 0 0 0;
+  }
+}
+
+#pickup-form {
+
+}
