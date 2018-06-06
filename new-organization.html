@@ -13,8 +13,8 @@
       </a>
       <section class="nav-menu">
         <a href="organizations.html" class = "nav-link">organizations</a>
-        <a href="new-user.html" class="active nav-link">join</a>
-        <a href="#" class="nav-link">login</a>
+        <a href="#userRegistration" id="join-link" class="active nav-link">join</a>
+        <a href="#regularLogin" id="nav-login" class="nav-link">login</a>
       </section>
     </nav>
     <main class="grid">
@@ -36,6 +36,56 @@
         <input class="medium-input" type="submit" value="Register"/>
       </form>
     </main>
+    <div id="regularLogin" class="modalDialog no-transition">
+      <div class="modal-box">
+        <form class="login-form">
+          <a href="#close" title="Close" class="close">X</a>
+          <label class="label-text">Email</label>
+          <input class="medium-input" type="email" name="email" placeholder="Email" />
+          <label class="label-text" for="password">Password</label>
+          <input class="medium-input" type="password" name="password" placeholder="Password"/>
+          <input class="medium-input" type="submit" value="Log In" />
+          <a href="#organizationLogin" class="arrow-button">Organization Login</a>
+        </form>
+      </div>
+    </div>
+    <div id="organizationLogin" class="modalDialog no-transition">
+      <div class="modal-box">
+        <form id="orgLogin" class="login-form">
+          <a href="#close" title="Close" class="close">X</a>
+          <label class="label-text">Organization</label>
+          <select class="medium-input" type="select" name="organizations" multiple></select>
+          <label class="label-text">Contact Email</label>
+          <input class="medium-input" type="email" name="email" placeholder="Email"/>
+          <label class="label-text" for="password">Password</label>
+          <input class="medium-input" type="password" name="password" placeholder="Password"/>
+          <input class="medium-input" type="submit" value="Log In" />
+        </form>
+      </div>
+    </div>
+    <div id="userRegistration" class="modalDialog no-transition">
+      <div class="modal-box">
+        <form class="login-form">
+          <a href="#close" title="Close" class="close">X</a>
+          <a href="new-organization.html" class="schedule-link">Register an Organization >>></a>
+          <h1 class="modal-header">
+            <img src="./lib/images/logo.png" class="nav-logo" />
+            Register for an Account
+          </h1>
+          <label class="label-text">First Name</label>
+          <input class="medium-input" name="first_name" placeholder="First Name" />
+          <label class="label-text">First Name</label>
+          <input class="medium-input" name="last_name" placeholder="Last Name" />
+          <label class="label-text">Email</label>
+          <input class="medium-input" type="email" name="email" placeholder="Email"/>
+          <label class="label-text">Phone</label>
+          <input class="medium-input" type="tel" name="phone" placeholder="phone"/>
+          <label class="label-text" for="password">Password</label>
+          <input class="medium-input" type="password" name="password" placeholder="Password"/>
+          <input class="medium-input" type="submit" value="Register" />
+        </form>
+      </div>
+    </div>
     <script src="main.bundle.js"></script>
   </body>
 </html>

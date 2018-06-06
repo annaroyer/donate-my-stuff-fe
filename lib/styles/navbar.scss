@@ -17,9 +17,6 @@ nav {
       size: 1.5rem;
       weight: bolder;
     }
-    .nav-logo {
-      max-width: 3rem;
-    }
   }
   .nav-title:hover {
     color: $watermelon;
@@ -40,4 +37,8 @@ nav {
       color: $watermelon;
     }
   }
+}
+
+.nav-logo {
+  max-width: 3rem;
 }

@@ -1,22 +1,25 @@
+.arrow-button {
+  width: 10rem;
+  border-radius: 0.5rem;
+  color: $smog;
+  font:{
+    family: 'Lato', sans-serif;
+    weight: 300;
+    size: 0.9rem;
+  }
+  padding: 0.5rem;
+  text-decoration: none;
+  border: 0.1rem solid $cream;
+  background: $sky url('../images/right-arrow.svg') no-repeat;
+  background-size:  1.5rem 2.5rem;
+  background-position: right 5% center;
+}
+
 .button-container {
   display: flex;
   justify-content: flex-end;
   .arrow-button {
-    width: 10rem;
     position: absolute;
-    border-radius: 0.5rem;
-    color: $smog;
-    font:{
-      family: 'Lato', sans-serif;
-      weight: 300;
-      size: 0.9rem;
-    }
-    padding: 0.5rem;
-    text-decoration: none;
-    border: 0.1rem solid $cream;
-    background: $sky url('../images/right-arrow.svg') no-repeat;
-    background-position: right 5% center;
-    background-size:  1.5rem 2.5rem;
   }
 }
 
@@ -47,4 +50,10 @@
   background-color: $sky;
   padding: 0.5rem;
   outline: none;
+}
+
+.modal-box{
+  .done-button {
+    margin: 1rem 25%;
+  }
 }
