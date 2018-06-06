@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8" />
     <title>Donate My Stuff</title>
-    <script type="text/javascript" src="./lib/scripts/organizations.js"></script>
   </head>
   <body>
     <nav class="navigation">
@@ -30,16 +29,16 @@
       <section class="pickup-container">
         <h1 class="sub-header">Upcoming Pickups</h1>
         <div class="pickup">
-          <a href="#" class="schedule-link">Schedule Pickup >>></a>
           <center></center>
-          <div class="even-rows">
-            <figure>
-              <figcaption>Also Accepting:</figcaption>
-            </figure>
-            <figure>
-              <figcaption>Zipcodes:</figcaption>
-            </figure>
-          </div>
+            <p><bold>Also Accepting: </bold><br /></p>
+            <p><bold>Zipcodes: </bold><br /></p>
+            <div class="even-rows">
+              <div>
+                <input type="checkbox" name="pickup_id" />
+                <label>Choose this Pickup</label>
+              </div>
+              <a href="#openRegistration" class="schedule-link">Schedule Pickup >>></a>
+            </div>
         </div>
       <section>
     </main>
