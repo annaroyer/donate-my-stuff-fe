@@ -5,6 +5,7 @@
     size: 1rem;
     weight: 300;
   }
+  text-align: center;
 }
 
 %header-text {
@@ -24,6 +25,7 @@
   @extend %header-text;
   color: $carbon;
   padding: 1rem;
+  text-align: center;
 }
 
 .organization-link {
@@ -32,7 +34,7 @@
 
 a.organization-link:hover {
   .sub-header {
-    color: $smog;    
+    color: $smog;
   }
 }
 
@@ -40,8 +42,9 @@ a.organization-link:hover {
   @extend %header-text;
   color: $smog;
   font-size: 3rem;
-  padding: 0;
+  padding: 0 0 0.4rem 0;
   grid-area: 1 / 4 / span 1 / span 6;
+  background-size: 2.5rem;
 }
 
 .blue-text {
