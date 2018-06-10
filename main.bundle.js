@@ -52,11 +52,11 @@
 	__webpack_require__(6);
 	__webpack_require__(11);
 	__webpack_require__(23);
-	__webpack_require__(25);
 	__webpack_require__(26);
 	__webpack_require__(27);
 	__webpack_require__(28);
-	__webpack_require__(29);
+	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./scripts/login.js\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./scripts/dashboard.js\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 
 /***/ }),
 /* 1 */
@@ -5787,7 +5787,9 @@
 /* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function($) {const pickupHeading = organization => {
+	/* WEBPACK VAR INJECTION */(function($) {const baseUrl = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./dmsAPI\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+
+	const pickupHeading = organization => {
 	  return $(`<h1 class="centered">${organization.name}</h1>`).prepend($(`<img class="logo" src=${organization.logo} alt="${organization.name} logo" />`));
 	};
 
@@ -5810,7 +5812,7 @@
 	};
 
 	const getPickupsByZipcode = zipcode => {
-	  fetch(`http://localhost:3000/api/v1/pickups?zipcode=${zipcode}`).then(response => response.json()).then(appendAllPickups);
+	  fetch(`${baseUrl}/api/v1/pickups?zipcode=${zipcode}`).then(response => response.json()).then(appendAllPickups);
 	};
 
 	$('.search-form').submit(event => {
@@ -16191,10 +16193,13 @@
 
 
 /***/ }),
-/* 25 */
+/* 25 */,
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function($) {const addToSearchField = organization => {
+	/* WEBPACK VAR INJECTION */(function($) {const baseUrl = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./dmsAPI\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+
+	const addToSearchField = organization => {
 	  $(`<option value=${organization.id}>${organization.name}</option>`).appendTo($('select[name=organizations]'));
 	};
 
@@ -16208,7 +16213,7 @@
 	};
 
 	const getAllOrganizations = () => {
-	  fetch('http://localhost:3000/api/v1/organizations').then(response => response.json()).then(organizations => {
+	  fetch(`${baseUrl}/api/v1/organizations`).then(response => response.json()).then(organizations => {
 	    $('form select[name="organizations"]').attr('size', organizations.count);
 	    organizations.forEach(appendSmallOrganization);
 	  });
@@ -16255,14 +16260,14 @@
 	const getSingleOrganization = () => {
 	  $('#pickup-form').hide();
 	  let id = window.location.search.slice(4);
-	  fetch(`http://localhost:3000/api/v1/organizations/${id}`).then(response => response.json()).then(organization => {
+	  fetch(`${baseUrl}/api/v1/organizations/${id}`).then(response => response.json()).then(organization => {
 	    appendLargeOrganization(organization);
 	    organization.pickups.forEach(appendOrganizationPickup);
 	  });
 	};
 
 	const getListOfOrgs = () => {
-	  fetch('http://localhost:3000/api/v1/organizations').then(response => response.json()).then(organizations => {
+	  fetch(`${baseUrl}/api/v1/organizations`).then(response => response.json()).then(organizations => {
 	    $('form select[name="organizations"]').attr('size', organizations.count);
 	    organizations.forEach(addToSearchField);
 	  });
@@ -16314,7 +16319,7 @@
 	  }
 	  let date = $('input[name=date]').val();
 	  let body = { date: date, zipcodes: zips, accepted_items: items };
-	  fetch('http://localhost:3000/api/v1/organizations/1/pickups', {
+	  fetch(`${baseUrl}/api/v1/organizations/1/pickups`, {
 	    method: 'POST',
 	    body: JSON.stringify(body),
 	    headers: { 'Content-Type': 'application/json' },
@@ -16341,7 +16346,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(24)))
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {$('.register-organization').submit(event => {
@@ -16390,10 +16395,12 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(24)))
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function($) {function DonorPickup() {
+	/* WEBPACK VAR INJECTION */(function($) {const baseUrl = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./dmsAPI\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+
+	function DonorPickup() {
 	  this.street_address = $('input[name=street_address]').val(), this.city = $('input[name=city]').val(), this.state = $('select[name=state]').val(), this.zipcode = $('input[name=zipcode]').val(), this.phone = $('input[name=phone]').val(), this.email = $('input[name=email]').val();
 	}
 
@@ -16422,7 +16429,7 @@
 	  }
 	};
 	const postDonorPickup = pickup_id => {
-	  fetch(`http://localhost:3000/api/v1/pickups/${pickup_id}/donors`, {
+	  fetch(`${baseUrl}/api/v1/pickups/${pickup_id}/donors`, {
 	    method: 'POST',
 	    body: JSON.stringify(new DonorPickup()),
 	    headers: { 'Content-Type': 'application/json' },
@@ -16436,18 +16443,6 @@
 	  postDonorPickup(pickup_id);
 	});
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(24)))
-
-/***/ }),
-/* 28 */
-/***/ (function(module, exports) {
-
-	
-
-/***/ }),
-/* 29 */
-/***/ (function(module, exports) {
-
-	
 
 /***/ })
 /******/ ]);
