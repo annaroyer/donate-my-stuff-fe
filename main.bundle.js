@@ -16286,17 +16286,6 @@
 	  });
 	};
 
-	const windowOptions = {
-	  "/index.html": getAllOrganizations,
-	  "/organizations.html": getAllOrganizations,
-	  "/organization.html": getSingleOrganization,
-	  "/organization-dashboard.html": getSingleOrganization
-	};
-
-	const hashOptions = {
-	  "#openRegistration": $('.donor-registration-message').hide()
-	};
-
 	$('#orgLogin').submit(event => {
 	  event.preventDefault();
 	  let id = document.querySelector('[name=organizations]')[0].value;
@@ -16348,13 +16337,28 @@
 	  });
 	});
 
+	const windowOptions = {
+	  "index.html": getAllOrganizations,
+	  "organizations.html": getAllOrganizations,
+	  "organization.html": getSingleOrganization,
+	  "organization-dashboard.html": getSingleOrganization
+	};
+
+	const hashOptions = {
+	  "#openRegistration": $('.donor-registration-message').hide()
+	};
+
+	const currentPage = () => {
+	  return window.location.pathname.split('/').pop();
+	};
+
 	$(document).ready(() => {
 	  setTimeout(() => {
 	    $('div.modalDialog').removeClass('no-transition');
 	  });
 	});
 
-	window.onload = windowOptions[window.location.pathname] || getListOfOrgs;
+	window.onload = windowOptions[currentPage()] || getListOfOrgs;
 	window.onhashchange = hashOptions[window.location.hash];
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(25)))
 
