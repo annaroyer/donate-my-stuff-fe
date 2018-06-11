@@ -50,12 +50,12 @@
 	__webpack_require__(4);
 	__webpack_require__(5);
 	__webpack_require__(6);
+	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./scripts/dmsAPI.js\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	__webpack_require__(11);
-	__webpack_require__(12);
-	__webpack_require__(24);
+	__webpack_require__(23);
+	__webpack_require__(25);
 	__webpack_require__(26);
 	__webpack_require__(27);
-	__webpack_require__(28);
 
 /***/ }),
 /* 1 */
@@ -443,25 +443,10 @@
 
 /***/ }),
 /* 11 */
-/***/ (function(module, exports) {
-
-	const baseUrl = () => {
-	  const host = window.location.hostname;
-	  if (host === "localhost" || "127.0.0.1") {
-	    return 'http://localhost:3000';
-	  } else {
-	    return 'https://desolate-oasis-56246.herokuapp.com';
-	  }
-	};
-
-	module.exports = baseUrl;
-
-/***/ }),
-/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	const firebase = __webpack_require__(13);
-	__webpack_require__(22);
+	const firebase = __webpack_require__(12);
+	__webpack_require__(21);
 
 	const config = {
 	  apiKey: "AIzaSyCnR9jW53w2TD0Hij8zgt0j3vHfihKxwDA",
@@ -526,15 +511,15 @@
 	// .addEventListener('click', toggleSignIn(), false)
 
 /***/ }),
-/* 13 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
 
-	__webpack_require__(14);
-	var firebase = _interopDefault(__webpack_require__(19));
+	__webpack_require__(13);
+	var firebase = _interopDefault(__webpack_require__(18));
 
 	/**
 	 * Copyright 2018 Google Inc.
@@ -556,12 +541,12 @@
 
 
 /***/ }),
-/* 14 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(setImmediate, global) {'use strict';
 
-	__webpack_require__(18);
+	__webpack_require__(17);
 
 	// Store setTimeout reference so promise-polyfill will be unaffected by
 	// other code modifying setTimeout (like sinon.useFakeTimers())
@@ -2091,10 +2076,10 @@
 	 * limitations under the License.
 	 */
 
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(15).setImmediate, (function() { return this; }())))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(14).setImmediate, (function() { return this; }())))
 
 /***/ }),
-/* 15 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {var scope = (typeof global !== "undefined" && global) ||
@@ -2150,7 +2135,7 @@
 	};
 
 	// setimmediate attaches itself to the global object
-	__webpack_require__(16);
+	__webpack_require__(15);
 	// On some exotic environments, it's not clear which object `setimmediate` was
 	// able to install onto.  Search each possibility in the same order as the
 	// `setimmediate` library.
@@ -2164,7 +2149,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ }),
-/* 16 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
@@ -2354,10 +2339,10 @@
 	    attachTo.clearImmediate = clearImmediate;
 	}(typeof self === "undefined" ? typeof global === "undefined" ? this : global : self));
 
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(17)))
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(16)))
 
 /***/ }),
-/* 17 */
+/* 16 */
 /***/ (function(module, exports) {
 
 	// shim for using process in browser
@@ -2547,7 +2532,7 @@
 
 
 /***/ }),
-/* 18 */
+/* 17 */
 /***/ (function(module, exports) {
 
 	(function(self) {
@@ -3019,14 +3004,14 @@
 
 
 /***/ }),
-/* 19 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	Object.defineProperty(exports, '__esModule', { value: true });
 
-	var util = __webpack_require__(20);
+	var util = __webpack_require__(19);
 
 	/**
 	 * Copyright 2017 Google Inc.
@@ -3423,14 +3408,14 @@
 
 
 /***/ }),
-/* 20 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	Object.defineProperty(exports, '__esModule', { value: true });
 
-	var tslib_1 = __webpack_require__(21);
+	var tslib_1 = __webpack_require__(20);
 
 	/**
 	 * Copyright 2017 Google Inc.
@@ -5209,7 +5194,7 @@
 
 
 /***/ }),
-/* 21 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(global) {/*! *****************************************************************************
@@ -5457,12 +5442,12 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ }),
-/* 22 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	__webpack_require__(23);
+	__webpack_require__(22);
 
 	/**
 	 * Copyright 2017 Google Inc.
@@ -5482,11 +5467,11 @@
 
 
 /***/ }),
-/* 23 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {(function() {
-	  var firebase = __webpack_require__(19).default;
+	  var firebase = __webpack_require__(18).default;
 	  var g,aa=aa||{},k=this;function l(a){return"string"==typeof a}function ba(a){return"boolean"==typeof a}function ca(){}
 	function da(a){var b=typeof a;if("object"==b)if(a){if(a instanceof Array)return"array";if(a instanceof Object)return b;var c=Object.prototype.toString.call(a);if("[object Window]"==c)return"object";if("[object Array]"==c||"number"==typeof a.length&&"undefined"!=typeof a.splice&&"undefined"!=typeof a.propertyIsEnumerable&&!a.propertyIsEnumerable("splice"))return"array";if("[object Function]"==c||"undefined"!=typeof a.call&&"undefined"!=typeof a.propertyIsEnumerable&&!a.propertyIsEnumerable("call"))return"function"}else return"null";
 	else if("function"==b&&"undefined"==typeof a.call)return"object";return b}function ea(a){return null===a}function fa(a){return"array"==da(a)}function ha(a){var b=da(a);return"array"==b||"object"==b&&"number"==typeof a.length}function n(a){return"function"==da(a)}function q(a){var b=typeof a;return"object"==b&&null!=a||"function"==b}var ia="closure_uid_"+(1E9*Math.random()>>>0),ja=0;function ka(a,b,c){return a.call.apply(a.bind,arguments)}
@@ -5798,10 +5783,10 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ }),
-/* 24 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function($) {const baseUrl = __webpack_require__(11);
+	/* WEBPACK VAR INJECTION */(function($) {const baseUrl = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./dmsAPI\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 
 	const pickupHeading = organization => {
 	  return $(`<h1 class="centered">${organization.name}</h1>`).prepend($(`<img class="logo" src=${organization.logo} alt="${organization.name} logo" />`));
@@ -5834,10 +5819,10 @@
 	  let zipcode = $('.zipcode-search').val();
 	  getPickupsByZipcode(zipcode);
 	});
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(25)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(24)))
 
 /***/ }),
-/* 25 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -16207,10 +16192,10 @@
 
 
 /***/ }),
-/* 26 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function($) {const baseUrl = __webpack_require__(11);
+	/* WEBPACK VAR INJECTION */(function($) {const baseUrl = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./dmsAPI\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 
 	const addToSearchField = organization => {
 	  $(`<option value=${organization.id}>${organization.name}</option>`).appendTo($('select[name=organizations]'));
@@ -16356,10 +16341,10 @@
 
 	window.onload = windowOptions[window.location.pathname] || getListOfOrgs;
 	window.onhashchange = hashOptions[window.location.hash];
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(25)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(24)))
 
 /***/ }),
-/* 27 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {$('.register-organization').submit(event => {
@@ -16405,13 +16390,13 @@
 	    $(`<p class="error">${error.message}</p>`).insertBefore(input);
 	  });
 	}
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(25)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(24)))
 
 /***/ }),
-/* 28 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function($) {const baseUrl = __webpack_require__(11);
+	/* WEBPACK VAR INJECTION */(function($) {const baseUrl = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./dmsAPI\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 
 	function DonorPickup() {
 	  this.street_address = $('input[name=street_address]').val(), this.city = $('input[name=city]').val(), this.state = $('select[name=state]').val(), this.zipcode = $('input[name=zipcode]').val(), this.phone = $('input[name=phone]').val(), this.email = $('input[name=email]').val();
@@ -16455,7 +16440,7 @@
 	  let pickup_id = $('input:checked').val();
 	  postDonorPickup(pickup_id);
 	});
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(25)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(24)))
 
 /***/ })
 /******/ ]);
