@@ -16262,14 +16262,6 @@
 	  }
 	};
 
-	const currentOrgId = () => {
-	  if (window.location.pathname == '/organization.html') {
-	    return window.location.search.slice(4);
-	  } else if (window.location.pathname == "/organization-dashboard.html") {
-	    return window.localStorage.getItem('current_org');
-	  }
-	};
-
 	const getSingleOrganization = () => {
 	  $('#pickup-form').hide();
 	  let id = window.location.search.slice(4);
@@ -16338,6 +16330,7 @@
 	});
 
 	const windowOptions = {
+	  "": getAllOrganizations,
 	  "index.html": getAllOrganizations,
 	  "organizations.html": getAllOrganizations,
 	  "organization.html": getSingleOrganization,
