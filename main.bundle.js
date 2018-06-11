@@ -50,7 +50,7 @@
 	__webpack_require__(4);
 	__webpack_require__(5);
 	__webpack_require__(6);
-	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./scripts/dmsAPI.js\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	__webpack_require__(11);
 	__webpack_require__(12);
 	__webpack_require__(24);
 	__webpack_require__(26);
@@ -442,7 +442,21 @@
 
 
 /***/ }),
-/* 11 */,
+/* 11 */
+/***/ (function(module, exports) {
+
+	const baseURL = () => {
+	  const host = window.location.hostname;
+	  if (host === "localhost" || host === "127.0.0.1") {
+	    return "http://localhost:3000";
+	  } else {
+	    return 'https://desolate-oasis-56246.herokuapp.com';
+	  }
+	};
+
+	module.exports = { baseUrl };
+
+/***/ }),
 /* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5787,7 +5801,7 @@
 /* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function($) {const baseUrl = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./dmsAPI\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	/* WEBPACK VAR INJECTION */(function($) {const baseUrl = __webpack_require__(11).baseUrl;
 
 	const pickupHeading = organization => {
 	  return $(`<h1 class="centered">${organization.name}</h1>`).prepend($(`<img class="logo" src=${organization.logo} alt="${organization.name} logo" />`));
@@ -16196,7 +16210,7 @@
 /* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function($) {const baseUrl = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./dmsAPI\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	/* WEBPACK VAR INJECTION */(function($) {const baseUrl = __webpack_require__(11).baseUrl;
 
 	const addToSearchField = organization => {
 	  $(`<option value=${organization.id}>${organization.name}</option>`).appendTo($('select[name=organizations]'));
@@ -16397,7 +16411,7 @@
 /* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function($) {const baseUrl = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./dmsAPI\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	/* WEBPACK VAR INJECTION */(function($) {const baseUrl = __webpack_require__(11).baseUrl;
 
 	function DonorPickup() {
 	  this.street_address = $('input[name=street_address]').val(), this.city = $('input[name=city]').val(), this.state = $('select[name=state]').val(), this.zipcode = $('input[name=zipcode]').val(), this.phone = $('input[name=phone]').val(), this.email = $('input[name=email]').val();
